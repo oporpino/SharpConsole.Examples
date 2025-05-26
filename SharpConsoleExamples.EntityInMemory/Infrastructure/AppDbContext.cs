@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace SharpConsole.Entity.InMemory.Infrastructure;
+namespace SharpConsoleExamples.EntityInMemory.Infrastructure;
 
 public class AppDbContext : DbContext
 {

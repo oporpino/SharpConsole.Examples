@@ -11,11 +11,11 @@ services:
       - sharpconsole-network
   sharpconsole.entity.inmemory:
     build:
-      context: ./SharpConsole.Entity.InMemory
+      context: ./SharpConsoleExamples.EntityInMemory
       dockerfile: Dockerfile
     container_name: sharpconsole.entity.inmemory
     volumes:
-      - ./SharpConsole.Entity.InMemory:/src
+      - ./SharpConsoleExamples.EntityInMemory:/src
     networks:
       - sharpconsole-network
 

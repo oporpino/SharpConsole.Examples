@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["SharpConsole.Entity.InMemory.csproj", "."]
+COPY ["SharpConsoleExamples.EntityInMemory.csproj", "."]
 RUN dotnet restore
 COPY . .
 RUN dotnet build -c Release -o /app/build
@@ -11,4 +11,4 @@ RUN dotnet publish -c Release -o /app/publish
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "SharpConsole.EntityInMemory.dll"]
+ENTRYPOINT ["dotnet", "SharpConsoleExamples.EntityInMemory.dll"]

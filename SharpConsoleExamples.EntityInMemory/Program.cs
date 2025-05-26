@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SharpConsole.Core.Application;
 using SharpConsole.Core.Domain.Entities;
-using SharpConsole.Entity.InMemory.Infrastructure;
+using SharpConsoleExamples.EntityInMemory.Infrastructure;
 
 var options = new DbContextOptionsBuilder<AppDbContext>()
     .UseInMemoryDatabase(databaseName: "TestDb")
@@ -24,5 +24,4 @@ console.Start();
 public class EntityConsole : SharpConsoleBase
 {
   public AppDbContext? db { get; set; }
-
 }
