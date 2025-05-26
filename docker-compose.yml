@@ -7,7 +7,15 @@ services:
     container_name: sharpconsole.simple
     volumes:
       - ./SharpConsole.Simple:/src
-
+    networks:
+      - sharpconsole-network
+  sharpconsole.entity.inmemory:
+    build:
+      context: ./SharpConsole.Entity.InMemory
+      dockerfile: Dockerfile
+    container_name: sharpconsole.entity.inmemory
+    volumes:
+      - ./SharpConsole.Entity.InMemory:/src
     networks:
       - sharpconsole-network
 
