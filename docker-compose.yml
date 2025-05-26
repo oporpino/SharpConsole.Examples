@@ -2,11 +2,11 @@
 services:
   sharpconsole.simple:
     build:
-      context: ./SharpConsole.Simple
+      context: ./SharpConsoleExamples.Simple
       dockerfile: Dockerfile
     container_name: sharpconsole.simple
     volumes:
-      - ./SharpConsole.Simple:/src
+      - ./SharpConsoleExamples.Simple:/src
     networks:
       - sharpconsole-network
   sharpconsole.entity.inmemory:
