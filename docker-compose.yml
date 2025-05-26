@@ -1,0 +1,16 @@
+
+services:
+  sharpconsole.simple:
+    build:
+      context: ./SharpConsole.Simple
+      dockerfile: Dockerfile
+    container_name: sharpconsole.simple
+    volumes:
+      - ./SharpConsole.Simple:/src
+
+    networks:
+      - sharpconsole-network
+
+networks:
+  sharpconsole-network:
+    driver: bridge
