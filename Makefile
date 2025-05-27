@@ -12,11 +12,11 @@ clean:
 	docker compose down -v
 
 # Run the simple container
-run.simple:
-	docker compose build sharpconsole.simple
-	docker compose run --rm sharpconsole.simple
+run.examples.simple:
+	docker compose build sharpconsole.examples.simple
+	docker compose run --rm sharpconsole.examples.simple
 
 # Run the entity container
-run.entity.inmemory:
-	docker compose build sharpconsole.entity.inmemory
-	docker compose run --rm sharpconsole.entity.inmemory
+run.examples.entity-inmemory:
+	docker compose build sharpconsole.examples.entity-inmemory
+	docker compose run --rm sharpconsole.examples.entity-inmemory

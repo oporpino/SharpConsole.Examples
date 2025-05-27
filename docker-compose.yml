@@ -1,6 +1,6 @@
 
 services:
-  sharpconsole.simple:
+  sharpconsole.examples.simple:
     build:
       context: ./SharpConsoleExamples.Simple
       dockerfile: Dockerfile
@@ -8,8 +8,8 @@ services:
     volumes:
       - ./SharpConsoleExamples.Simple:/src
     networks:
-      - sharpconsole-network
-  sharpconsole.entity.inmemory:
+      - sharpconsole-examples-network
+  sharpconsole.examples.entity-inmemory:
     build:
       context: ./SharpConsoleExamples.EntityInMemory
       dockerfile: Dockerfile
@@ -17,8 +17,8 @@ services:
     volumes:
       - ./SharpConsoleExamples.EntityInMemory:/src
     networks:
-      - sharpconsole-network
+      - sharpconsole-examples-network
 
 networks:
-  sharpconsole-network:
+  sharpconsole-examples-network:
     driver: bridge

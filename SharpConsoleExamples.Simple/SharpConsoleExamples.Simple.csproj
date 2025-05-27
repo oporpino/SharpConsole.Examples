@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="SharpConsole" Version="0.0.4" />
+    <PackageReference Include="SharpConsole" Version="0.0.6" />
   </ItemGroup>
 
 </Project>
