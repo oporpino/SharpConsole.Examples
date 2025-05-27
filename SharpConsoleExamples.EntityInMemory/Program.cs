@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using SharpConsole.Core.Application;
-using SharpConsole.Core.Domain.Entities;
+
 using SharpConsoleExamples.EntityInMemory.Infrastructure;
 
 var options = new DbContextOptionsBuilder<AppDbContext>()
@@ -14,14 +14,14 @@ dbContext.Users.Add(new User { Name = "John Doe", Age = 30 });
 dbContext.Users.Add(new User { Name = "Jane Smith", Age = 25 });
 await dbContext.SaveChangesAsync();
 
-var console = new EntityConsole()
+var context = new EntityConsoleContext()
 {
   db = dbContext
 };
 
-console.Start();
+context.StartConsole();
 
-public class EntityConsole : SharpConsoleBase
+public class EntityConsoleContext : ConsoleContext
 {
   public AppDbContext? db { get; set; }
 }

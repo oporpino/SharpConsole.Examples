@@ -1,16 +1,15 @@
 ﻿using SharpConsole.Core.Application;
-using SharpConsole.Core.Domain.Entities;
 
-var console = new SimpleConsole
+var context = new SimpleConsoleContext
 {
   Name = "Simple Example",
   Tags = new[] { "tag1", "tag2" },
   Version = 1
 };
 
-console.Start();
+context.StartConsole();
 
-public class SimpleConsole : SharpConsoleBase
+public class SimpleConsoleContext : ConsoleContext
 {
   public string? Name { get; set; }
   public int? Version { get; set; }
